@@ -1,5 +1,5 @@
 
-public class Simulador {
+public class Simulador2 {
 
     public static void main(String[] args) {
         Notificador notificador = new Notificador();
@@ -10,15 +10,15 @@ public class Simulador {
 
         System.out.println("--------------------------------------------------\n");
 
-        System.out.println("-> Escenario: Notificacion de una nueva transaccion.");
+        System.out.println("Notificacion de una nueva transaccion.");
         notificador.setEstrategia(new NotificacionPush());
         notificador.ejecutarNotificacion(nombreUsuario, "Compra de $45.000 en Crepes & Waffles aprobada.");
 
-        System.out.println("\n-> Escenario: Envio de una promocion semanal.");
+        System.out.println("\nEnvio de una promocion semanal.");
         notificador.setEstrategia(new NotificacionEmail());
-        notificador.ejecutarNotificacion(emailUsuario, "¡Aprovecha! 2x1 en entradas de cine con tu tarjeta.");
+        notificador.ejecutarNotificacion(emailUsuario, " Aprovecha 2x1 en entradas de cine con tu tarjeta.");
 
-        System.out.println("\n-> Escenario: Alerta de seguridad importante.");
+        System.out.println("\n alerta de seguridad importante.");
         notificador.setEstrategia(new NotificacionSms());
         notificador.ejecutarNotificacion(telefonoUsuario, "Alerta: Se detecto un inicio de sesion desde un nuevo dispositivo. Si no fuiste tu, contacta a soporte.");
         
